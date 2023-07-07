@@ -9,6 +9,9 @@ df_linkedin.drop('Column1', axis=1, inplace=True)
 df_linkedin.fillna('', inplace=True)
 
 for index, row in df_linkedin.iterrows():
+    if '-' in str(row.job):
+        print(row.job)        
+    
     if str(row.work_type) in str(row.job) and (row.job != '' and row.work_type != ''):
         print(row.work_type + ' - ' + row.job)
 
