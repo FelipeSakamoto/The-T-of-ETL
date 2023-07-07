@@ -18,5 +18,3 @@ def get_keggle_dataset():
         zf.close()
         
     return read_csv('linkdin_Job_data.csv', sep=',')
-
-
